@@ -1,0 +1,24 @@
+filetype plugin indent on
+syntax enable
+
+set autoindent
+set backspace=indent,eol,start
+
+set ttimeout
+set ttimeoutlen=50
+
+set incsearch
+set hlsearch
+
+set laststatus=2
+
+let g:airline_powerline_fonts = 1
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set shortmess+=I
+set relativenumber
+let &t_Co=256

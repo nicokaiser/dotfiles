@@ -1,0 +1,40 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	lg = log --oneline --decorate --all --graph -30
+
+[color]
+	uxi = auto
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+[credential]
+	helper = store
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	#rebase = merges
+
+[push]
+	default = current
+	followTags = true
+
+[status]
+	branch = 1
+	short = 1
+
+[user]
+	useConfigOnly = true
+
+[include]
+	path = ~/.gitconfig.local
