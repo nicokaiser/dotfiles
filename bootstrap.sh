@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
-dir="$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE[0]}")"
+dir="$(pwd -P)"
 cd ~/
 git -C "$dir" submodule update --init
 reldir=${dir#$(pwd)/}
