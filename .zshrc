@@ -1,9 +1,5 @@
 # ~/.zshrc
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[[ -f "/usr/local/opt/nvm/nvm.sh" ]] && . /usr/local/opt/nvm/nvm.sh
-
 # History
 HISTSIZE=100000
 SAVEHIST=100000
@@ -14,6 +10,7 @@ ZSH=$HOME/.zsh/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 DISBALE_UNTRACKED_FILES_DIRTY="true"
+NVM_LAZY=1
 plugins=(history encode64 docker gitfast nvm docker-compose)
 source $ZSH/oh-my-zsh.sh
 
