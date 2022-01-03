@@ -10,7 +10,11 @@ HISTFILESIZE=20000
 shopt -s nocaseglob
 shopt -s checkwinsize
 
-PS1="\[\033[36m\]\u@\[\033[34m\]\h\[\033[01;32m\] ➜ \[\033[01;36m\] \w\[\033[00m\] "
+if [ $(id -u) -eq 0 ]; then
+    PS1="\n\[\e[1;31m\]\u\[\e[0m\] at \[\e[1;32m\]\h\[\e[0m\] in \[\e[1;36m\]\w\[\e[0m\]\n\[\e[1;32m\]❯\[\e[0m\] "
+else
+    PS1="\n\[\e[1;33m\]\u\[\e[0m\] at \[\e[1;32m\]\h\[\e[0m\] in \[\e[1;36m\]\w\[\e[0m\]\n\[\e[1;32m\]❯\[\e[0m\] "
+fi
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad

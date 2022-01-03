@@ -7,7 +7,10 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Oh My Zsh
 ZSH=$HOME/.zsh/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_CUSTOM=$HOME/.zsh/custom
+ZSH_THEME="spaceship"
+SPACESHIP_PROMPT_ORDER=(time user host dir line_sep exit_code char)
+SPACESHIP_PROMPT_SYMBOL="❯"
 DISABLE_AUTO_UPDATE="true"
 DISBALE_UNTRACKED_FILES_DIRTY="true"
 NVM_LAZY=1
@@ -17,8 +20,8 @@ source $ZSH/oh-my-zsh.sh
 # zsh-autosuggestions
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Prompt
-[[ -n $SSH_CONNECTION ]] && PROMPT="%{$fg[cyan]%}$USER@%{$fg[blue]%}%m%} ${PROMPT}" 
+# Starship
+[[ -x "$(which starship)" ]] && eval "$(starship init zsh)"
 
 # User configuration
 export LANG=en_US.UTF-8
