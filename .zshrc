@@ -14,7 +14,7 @@ SPACESHIP_PROMPT_SYMBOL="❯"
 DISABLE_AUTO_UPDATE="true"
 DISBALE_UNTRACKED_FILES_DIRTY="true"
 NVM_LAZY=1
-plugins=(history encode64 docker gitfast nvm docker-compose)
+plugins=(docker gitfast nvm docker-compose)
 source $ZSH/oh-my-zsh.sh
 
 # zsh-autosuggestions
