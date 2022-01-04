@@ -7,6 +7,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Oh My Zsh
 ZSH=$HOME/.zsh/.oh-my-zsh
+ZSH_DISABLE_COMPFIX=true
 ZSH_CUSTOM=$HOME/.zsh/custom
 ZSH_THEME="spaceship"
 SPACESHIP_PROMPT_ORDER=(time user host dir line_sep exit_code char)
