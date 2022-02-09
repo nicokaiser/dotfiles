@@ -23,7 +23,7 @@
 	defaultBranch = main
 
 [pull]
-	#rebase = merges
+	rebase = merges
 
 [push]
 	default = current
