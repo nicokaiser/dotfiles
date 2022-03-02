@@ -4,13 +4,15 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 dir="$(pwd -P)"
 cd ~/
 git -C "$dir" submodule update --init
-mkdir -p ~/.config
 reldir=${dir#$(pwd)/}
-files=".bashrc .gitconfig .gitignore_global .screenrc .vim .zsh .zshrc .config/starship.toml"
-for file in $files; do
-    if [[ -e ~/"$file" && ! -f ~/"$file" ]]; then
-        continue
-    fi
-    echo $file
-    ln -sf "$reldir"/"$file" "$file"
-done
+
+ln -vsf "$reldir"/.bashrc .
+ln -vsf "$reldir"/.gitconfig .
+ln -vsf "$reldir"/.gitignore_global .
+ln -vsf "$reldir"/.screenrc .
+ln -vsf "$reldir"/.vim .
+ln -vsf "$reldir"/.zsh .
+ln -vsf "$reldir"/.zshrc .
+
+mkdir -p .config
+ln -vsf ../"$reldir"/.config/starship.toml ./.config
