@@ -14,5 +14,7 @@ ln -vsf "$reldir"/.vim .
 ln -vsf "$reldir"/.zsh .
 ln -vsf "$reldir"/.zshrc .
 
+if [ ! -f ".hushlogin" ]; then touch .hushlogin; fi
+
 mkdir -p .config
 ln -vsf ../"$reldir"/.config/starship.toml ./.config
