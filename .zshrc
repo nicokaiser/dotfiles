@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Starship
-[[ -x "$(which starship)" ]] && eval "$(starship init zsh)"
+[[ -x "$(command -v starship)" ]] && eval "$(starship init zsh)"
 
 # User configuration
 export LANG=en_US.UTF-8
