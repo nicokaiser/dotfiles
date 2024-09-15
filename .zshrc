@@ -15,6 +15,7 @@ SPACESHIP_PROMPT_SYMBOL="❯"
 DISABLE_AUTO_UPDATE="true"
 DISBALE_UNTRACKED_FILES_DIRTY="true"
 NVM_LAZY=1
+NVM_LAZY_CMD=ncu
 plugins=(docker gitfast nvm docker-compose)
 source $ZSH/oh-my-zsh.sh
 
