@@ -3,9 +3,6 @@
 	name = Nico Kaiser
 	signingkey = 0x8CA23480C02A6A60
 
-[core]
-	excludesfile = ~/.gitignore_global
-
 [alias]
 	co = checkout
 	ci = commit

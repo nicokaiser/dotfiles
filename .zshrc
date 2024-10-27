@@ -1,9 +1,15 @@
 # ~/.zshrc
 
 # History
-HISTSIZE=100000
-SAVEHIST=100000
-HIST_STAMPS="yyyy-mm-dd"
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Oh My Zsh
 ZSH=$HOME/.zsh/.oh-my-zsh
@@ -28,7 +34,8 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 export LANG=en_US.UTF-8
 export EDITOR="vim"
-[[ -d "$HOME/.local/bin" ]] && PATH=$HOME/.local/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin
+export GOPATH="$HOME/.go"
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 

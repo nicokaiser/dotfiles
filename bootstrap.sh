@@ -8,7 +8,6 @@ reldir=${dir#$(pwd)/}
 
 ln -vsf "$reldir"/.bashrc .
 ln -vsf "$reldir"/.gitconfig .
-ln -vsf "$reldir"/.gitignore_global .
 ln -vsf "$reldir"/.vim .
 ln -vsf "$reldir"/.zsh .
 ln -vsf "$reldir"/.zshrc .
